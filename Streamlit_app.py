@@ -24,6 +24,7 @@ streamlit.dataframe(fruits_to_show)
 
 import snowflake.connector
 
+
 #my_cnx = snowflake.connector.connect(**streamlit.secrets["snowflake"])
 #my_cur = my_cnx.cursor()
 #my_cur.execute("SELECT * FROM fruit_load_list;")
