@@ -22,6 +22,12 @@ fruits_to_show = my_fruit_list.loc[fruits_selected]
 # Display the table on the page.
 streamlit.dataframe(fruits_to_show)
 
+# New section to display fruitvice api response
+import requests
+fruityvice_response = request.get("https://fruityvice.com/api/fruit/Watermelon")
+strimlit.text(fruityvice_response)
+
+
 import snowflake.connector
 
 
@@ -33,7 +39,7 @@ streamlit.text("The Fruit load list contains:")
 streamlit.dataframe(my_data_rows)
 
 #add_my_fruit = streamlit.multiselect("What fruit would you like to add?", list(my_data_rows.index),['Jackfruit'])
-added_fruit = my_data_rows.loc[my_data_rows]
-streamlit.dataframe(added_fruit)
+#added_fruit = my_data_rows.loc[my_data_rows]
+#streamlit.dataframe(added_fruit)
 
 #streamlit.text("Thanks for adding ",add_my_fruit)
