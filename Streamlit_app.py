@@ -48,7 +48,7 @@ streamlit.stop()
 
 streamlit.text("The Fruit load list contains:")
 #snowflake realted function
-deg get_fruit_load_list():
+def get_fruit_load_list():
       with my_cnx.cursor() as my_cur:
       my_cur.execute("SELECT * FROM fruit_load_list;")
       return my_cur.fetchall()
