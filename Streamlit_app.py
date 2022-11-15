@@ -24,8 +24,8 @@ streamlit.dataframe(fruits_to_show)
 
 # New section to display fruitvice api response
 import requests
-fruityvice_response = request.get("https://fruityvice.com/api/fruit/Watermelon")
-strimlit.text(fruityvice_response)
+fruityvice_response = requests.get("https://fruityvice.com/api/fruit/watermelon")
+streamlit.text(fruityvice_response)
 
 
 import snowflake.connector
